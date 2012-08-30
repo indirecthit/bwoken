@@ -57,7 +57,7 @@ module Bwoken
 
     def cmd
       build = Bwoken::Build.new
-      "#{File.expand_path('../../../bin', __FILE__)}/unix_instruments.sh \
+      "#{File.expand_path('../../../bin', __FILE__)}/unix_instruments.rb \
         #{device_flag} \
         -D #{self.class.trace_file_path} \
         -t #{Bwoken.path_to_automation_template} \

@@ -132,7 +132,7 @@ describe Bwoken::Script do
         Bwoken::Build.stub(:new => build)
 
         regexp = /
-          unix_instruments\.sh\s+
+          unix_instruments\.rb\s+
           -w\s#{uuid}\s+
           -D\s#{trace_file_path}\s+
           -t\s#{path_to_automation_template}\s+
@@ -154,7 +154,7 @@ describe Bwoken::Script do
         Bwoken::Build.stub(:new => build)
 
         regexp = /
-          unix_instruments\.sh\s+
+          unix_instruments\.rb\s+
           -D\s#{trace_file_path}\s+
           -t\s#{path_to_automation_template}\s+
           #{app_dir}\s+
