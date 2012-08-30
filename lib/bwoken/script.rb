@@ -51,8 +51,16 @@ module Bwoken
       }
     end
 
+    def env_variables_instruments
+      if env = ENV['INSTRUMENTS']
+        ' ' + env
+      else
+        ''
+      end
+    end
+
     def env_variables_for_cli
-      env_variables.map{|key,val| "-e #{key} #{val}"}.join(' ')
+      env_variables.map{|key,val| "-e #{key} #{val}"}.join(' ') + env_variables_instruments
     end
 
     def cmd
